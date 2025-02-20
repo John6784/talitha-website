@@ -8,7 +8,7 @@ export default function Scene() {
   return (
     <>
       <Canvas flat camera={{ fov: 25, near: 0.1, far: 200 }}>
-      <Perf />
+      <Perf position="bottom-right"/>
         <color attach="background" args={["#F3EDDB"]} />
         <Experience />
       </Canvas>
