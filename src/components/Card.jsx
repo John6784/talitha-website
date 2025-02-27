@@ -67,13 +67,13 @@ export default function Cards() {
           url="/division3.jpg"
           link="/division3"
           scale={[w / 3, w / 3, 1]}
-          position={[-w / 4, -h * 3, 0]}
+          position={[-w / 4, -h * 2.5, 0]}
         />
         <Card
           url="/division4.jpg"
           link="/division4"
           scale={[w / 3, w / 3, 1]}
-          position={[w / 4, -h * 4, 0]}
+          position={[w / 4, -h * 3.3, 0]}
         />
       </Scroll>
     </>

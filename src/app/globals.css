@@ -3,40 +3,57 @@
 @tailwind utilities;
 
 :root {
-  --background: #ffffff;
+  --background: #efefef;
   --foreground: #171717;
 }
 
 @media (prefers-color-scheme: dark) {
   :root {
-    --background: #0a0a0a;
+    --background: #373a3b;
     --foreground: #ededed;
   }
+}
+* {
+  box-sizing: border-box;
 }
 
 body {
   color: var(--foreground);
   background: var(--background);
   font-family: Arial, Helvetica, sans-serif;
+  min-height: 100%;
+  margin: 0;
+  line-height: 1.2;
+  display: block;
+  height: 500dvh;
 }
 
 .sections-container {
-  position: fixed;
+  /* position: fixed; */
   top: 0;
   left: 0;
+  right: 0;
   display: flex;
   flex-direction: column;
-  justify-content: center;
-  pointer-events: none; /* Allows interaction with 3D elements */
-  z-index: 50;
+  justify-content: center; /* Allows interaction with 3D elements */
 }
 
 .overlay-section {
-  height: 100vh;
+  position: relative;
   display: flex;
   align-items: center;
-  justify-content: center;
   font-size: 2rem;
   font-weight: bold; /* Almost transparent */
   width: 100%;
+}
+
+p {
+  display: block;
+  margin-block-start: 1em;
+  margin-block-end: 1em;
+  margin-inline-start: 0px;
+  margin-inline-end: 0px;
+  unicode-bidi: isolate;
+  margin-top: 0;
+  margin-top: 0;
 }
