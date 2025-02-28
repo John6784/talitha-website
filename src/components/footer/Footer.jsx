@@ -9,8 +9,8 @@ export function Footer() {
       <div className="max-w-6xl mx-auto grid grid-cols-1 md:grid-cols-3 gap-8">
         {/* Logo Section */}
         <div className="flex flex-col items-center md:items-start">
-          <Image src="/logo.png" width={150} height={50} alt="Talitha Logo" className="w-auto h-auto"/>
-          <p className="mt-2 text-sm text-gray-400">Empowering businesses for a better future.</p>
+          <Image src="/logo.png" width={150} height={50} alt="Talitha Logo" priority className="w-auto h-auto"/>
+          {/* <p className="mt-2 text-sm text-gray-400">Empowering businesses for a better future.</p> */}
         </div>
 
         {/* Navigation Links */}

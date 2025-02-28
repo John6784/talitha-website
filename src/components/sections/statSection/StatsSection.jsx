@@ -12,9 +12,9 @@ export default function StatsSection() {
   ];
 
   return (
-    <section className="py-16 px-[1.5rem] dark:bg-gray-900">
+    <section className="py-16 px-[1.5rem]">
       <div className="container mx-auto text-center">
-        <h2 className="text-sm font-bold text-gray-800 text-left dark:text-white uppercase mb-6">Our Impact</h2>
+        <h2 className="text-sm font-bold text-gray-800 text-left  dark:text-foreground uppercase mb-6">Our Impact</h2>
         <div className="grid grid-cols-2 md:grid-cols-4 gap-8">
           {stats.map((stat, index) => (
             <motion.div
@@ -23,7 +23,7 @@ export default function StatsSection() {
               whileInView={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.5, delay: index * 0.2 }}
               viewport={{ once: true }}
-              className="p-6 dark:bg-gray-800 sm:border-t-[1px] sm:border-b-[1px] sm:border-gray-400"
+              className="p-6 dark:bg-background sm:border-t-[1px] sm:border-b-[1px] sm:border-gray-400"
             >
               <h3 className="text-4xl sm:text-6xl font-bold text-talithaGreen font-tinos">
                 <CountUp start={0} end={stat.value} duration={2} />{stat.suffix}

@@ -54,7 +54,7 @@ export function Carousel() {
   return (
     <div>
       <div className="grid grid-flow-col justify-between items-center gap-2 sm:px-36">
-        <div className="uppercase font-semibold text-xs sm:text-sm text-headingColor">
+        <div className="uppercase font-semibold text-xs sm:text-sm text-headingColor dark:text-foreground">
           <p className="m-auto">Our Companies</p>
         </div>
         <div className="text-sm flex gap-2">
@@ -125,13 +125,14 @@ export function Carousel() {
                 <motion.div
                   whileHover={{ scale: 1.1 }}
                   transition={{ duration: 0.5 }}
-                  className="h-full w-full"
+                  className="h-full w-full relative"
                 >
                   <Image
                     src={image}
-                    layout="fill"
-                    objectFit="cover"
+                    fill
                     alt={`carousel_image${index + 1}`}
+                    style={{ objectFit: "cover" }}
+                    sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw"
                     className="h-auto w-auto"
                   />
                 </motion.div>

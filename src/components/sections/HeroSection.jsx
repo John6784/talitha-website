@@ -3,6 +3,7 @@
 import { motion } from "framer-motion";
 import Scene from "../Scene";
 import Carousel from "./Carousel/Carousel";
+import Image from "next/image";
 
 export default function HeroSection() {
   return (
@@ -12,8 +13,18 @@ export default function HeroSection() {
       transition={{ duration: 1 }}
       className="relative max-w-full mx-auto block px-4 sm:px-6 lg:px-8 overflow-hidden"
     >
-      {/* <Scene /> */}
-      <div className="w-full pl-[1.5rem] pr-[1.5rem] mr-auto ml-auto block dark:bg-background dark:text-foreground bg-opacity-40">
+      <div className="absolute ml-[40rem] mt-20">
+        {" "}
+        <Image
+          src={"/demo.png"}
+          width={1000}
+          height={1000}
+          alt="building"
+          priority
+          className="w-auto h-auto"
+        />
+      </div>
+      <div className="w-full pl-[1.5rem] pr-[1.5rem] mr-auto ml-auto block dark:bg-background bg-opacity-40">
         <div className="w-full pt-[3rem]" />
         <div className="w-full pt-[6rem] sm:pt-[8rem]" />
 
@@ -32,7 +43,7 @@ export default function HeroSection() {
         >
           {/* Heading */}
           <motion.h1
-            className="text-headingColor relative flex flex-wrap text-[50px] sm:text-[80px] tracking-wider font-bold font-tinos col-span-2 pr-0 gap-x-[0.6rem] sm:pl-2"
+            className="text-headingColor relative flex flex-wrap text-[50px] sm:text-[80px] tracking-wider font-bold font-tinos col-span-2 pr-0 gap-x-[0.6rem] sm:pl-2 dark:text-foreground"
             variants={{
               hidden: { opacity: 0, y: 30 },
               visible: { opacity: 1, y: 0, transition: { duration: 1 } },
@@ -45,10 +56,14 @@ export default function HeroSection() {
 
           {/* Paragraph */}
           <motion.p
-            className="text-[17px] sm:text-[20px] text-paragraph max-w-xl border-l-2 border-talithaRed leading-relaxed relative block col-span-2 pl-[1rem]"
+            className="text-[17px] sm:text-[20px] text-paragraph max-w-xl border-l-2 border-talithaRed leading-relaxed relative block col-span-2 pl-[1rem] dark:text-foreground"
             variants={{
               hidden: { opacity: 0, y: 30 },
-              visible: { opacity: 1, y: 0, transition: { duration: 1, delay: 0.3 } },
+              visible: {
+                opacity: 1,
+                y: 0,
+                transition: { duration: 1, delay: 0.3 },
+              },
             }}
           >
             Innovating for prosperity in pharmaceuticals
