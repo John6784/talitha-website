@@ -45,10 +45,10 @@ export function Testimonials() {
     <div className="w-full">
     <div className="sm:pt-[3rem]"/>
       <div className="grid grid-flow-col justify-between items-center gap-2 px-6 sm:px-36">
-        <div className="uppercase font-semibold text-xs text-headingColor sm:text-sm">
+        <div className="uppercase font-semibold text-xs text-headingColor dark:text-foreground sm:text-sm">
           <h2 className="m-auto">Testimonials</h2>
         </div>
-        <div className="text-sm flex gap-2">
+        <div className="text-sm flex gap-2 dark:text-foreground">
           <button className={`${styles.embla__prev} h-10 w-10 flex items-center justify-center`} onClick={() => scroll("prev")}>
             <ChevronLeft size={20} />
           </button>
@@ -65,10 +65,10 @@ export function Testimonials() {
                 <Image src={image} width={50} height={50} alt={`carousel_image${index + 1}`} className="h-auto w-auto rounded-full" />
               </div>
               <div className="h-[2rem]" />
-              <div className="text-paragraph text-sm sm:text-xl max-w-80 text-center leading-relaxed">
+              <div className="text-paragraph text-sm sm:text-xl max-w-80 text-center leading-relaxed dark:text-foreground">
                 <p>
                   <em>{`“${text}”`}</em>
-                  <span className="block text-headingColor pt-2">– {author}</span>
+                  <span className="block text-headingColor pt-2 dark:text-foreground">– {author}</span>
                 </p>
               </div>
             </div>

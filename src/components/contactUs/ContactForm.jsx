@@ -31,7 +31,7 @@ export function ContactForm() {
           <h3>Reach out, let’s do something great together!</h3>
         </div>
       </div>
-      <p className="hidden sm:block mt-20 max-w-96 col-span-1 row-span-1 text-gray-600">
+      <p className="hidden sm:block mt-20 max-w-96 col-span-1 row-span-1 text-gray-600 dark:text-foreground">
         We receive a lot of inquiries, so it may take us a little while to get
         back to you if we think that there might be a fit. We hope to see you
         soon!
@@ -40,7 +40,7 @@ export function ContactForm() {
       <form onSubmit={handleSubmit} className="mt-10 sm:mt-20 col-span-2 row-span-2 space-y-4">
         <div className="sm:grid grid-cols-2 gap-4">
           <div>
-            <label className="block text-sm font-medium text-gray-700">
+            <label className="block text-sm font-medium text-gray-700 dark:text-foreground">
               Name
             </label>
             <input
@@ -53,7 +53,7 @@ export function ContactForm() {
             />
           </div>
           <div>
-            <label className="block text-sm font-medium text-gray-700">
+            <label className="block text-sm font-medium text-gray-700 dark:text-foreground">
               Email
             </label>
             <input
@@ -67,7 +67,7 @@ export function ContactForm() {
           </div>
         </div>
         <div>
-          <label className="block text-sm font-medium text-gray-700">
+          <label className="block text-sm font-medium text-gray-700 dark:text-foreground">
             Message
           </label>
           <textarea
